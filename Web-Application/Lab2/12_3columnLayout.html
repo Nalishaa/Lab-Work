@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive 3 Columns</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Desktop: 3 columns */
+.column {
+  width: calc(33.33% - 20px); /* 1/3 of total screen minus the gap for full screen */
+  background: #ec57e0;
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 768px) {
+  .column {
+    width: calc(50% - 20px); /* 50% of screen minus the gap for tablet */
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 576px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="column">Nalisha /23</div>
+  <div class="column">Column 2</div>
+  <div class="column">Column 3</div>
+</div>
+
+</body>
+</html>
