@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Box Sizing Demo</title>
+
+<style>
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Default box model */
+.content-box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  background: lightblue;
+  box-sizing: content-box; /* DEFAULT */
+}
+
+/* Border-box */
+.border-box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  background: lightgreen;
+  box-sizing: border-box;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="content-box">
+    Content-box<br>
+    Width = 200px + padding + border
+  </div>
+
+  <div class="border-box">
+    Border-box<br>
+    Total width = 200px
+  </div>
+<p>Nalisha /23</p>
+</div>
+
+</body>
+</html>
