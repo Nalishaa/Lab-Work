@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Fixed Header + Sticky Sidebar</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  /* Fixed Header */
+  header {
+    position: fixed;
+    top: 0;  /* top, left, right only work as position:fixed */
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #333;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  /* Layout wrapper */
+  .container {
+    display: flex;
+    margin-top: 60px; /* space for fixed header */
+  }
+
+  /* Sticky Sidebar */
+  aside {
+    width: 220px;
+    padding: 20px;
+    background: #f2f2f2;
+    height: calc(100vh - 60px);
+    position: sticky;
+    top: 60px; /* sticks below header */
+  }
+
+  /* Main Content */
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .content-block {
+    height: 200px;
+    background: #e0e0e0;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+Nalisha /23
+</header>
+
+<div class="container">
+  <aside>
+    <h3>Sidebar</h3>
+    <p>Sticky menu</p>
+    <p>Link 1</p>
+    <p>Link 2</p>
+    <p>Link 3</p>
+  </aside>
+
+  <main>
+    <h2>Main Content</h2>
+
+    <!-- Lots of content to enable scrolling -->
+    <div class="content-block">Block 1</div>
+    <div class="content-block">Block 2</div>
+    <div class="content-block">Block 3</div>
+    <div class="content-block">Block 4</div>
+    <div class="content-block">Block 5</div>
+    <div class="content-block">Block 6</div>
+    <div class="content-block">Block 7</div>
+    <div class="content-block">Block 8</div>
+  </main>
+</div>
+
+</body>
+</html>

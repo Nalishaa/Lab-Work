@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Media Queries Example</title>
+
+<style>
+/* Base styles (desktop first) */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background: lightgreen;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        background: lightblue;
+    }
+}
+
+/* Mobile THIS MUST be AFTER TABLET, it will first check larger size then smaller, otherwise gets overridden*/
+@media (max-width: 576px) {
+  body {
+    background: lightcoral;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  body {
+    background: lightgreen;
+  }
+}
+</style>
+</head>
+<body>
+
+Responsive Layout <br>
+Nalisha /23
+
+</body>
+</html>

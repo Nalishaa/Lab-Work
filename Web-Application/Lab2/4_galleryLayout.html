@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3×3 Gallery Grid</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background: #ecbfbf;
+}
+
+/* Gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, 200px); /* 3 rows */
+    gap: 15px;
+    max-width: 800px;
+    margin: auto;    
+}
+
+/* Individual items */
+.item {
+    background: #4c7aaf;
+    color: white;
+    font-size: 24px;
+    border-radius: 8px;
+    display: grid;  /* each item is a separate grid on top of the OG grid */
+    place-items: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2 style="text-align:center;">3×3 Gallery Layout</h2>
+
+<div class="gallery">
+    <div class="item">Nalisha /23</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+</div>
+
+</body>
+</html>

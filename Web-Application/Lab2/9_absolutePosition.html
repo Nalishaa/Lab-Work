@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Absolute Center</title>
+
+<style>
+/* Parent container */
+.parent {
+  position: relative;      /* Reference point */
+  height: 100vh;           /* Full screen height */
+  background: #42dd69;
+}
+
+/* Element to center */
+.child {
+  position: absolute;     /* Remove from normal flow */
+  top: 50%;               /* Move to middle vertically */
+  left: 50%;              /* Move to middle horizontally */
+  transform: translate(-50%, -50%); /* Pull back by half its own size */
+  padding: 20px 40px;
+  background: steelblue;
+  color: white;
+  font-size: 24px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="parent">
+  <div class="child">
+    Centered using absolute
+    <br>Nalisha /23
+  </div>
+</div>
+
+</body>
+</html>

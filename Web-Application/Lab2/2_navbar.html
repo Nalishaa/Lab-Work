@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Navbar</title>
+
+    <style>
+        body {
+            margin: 0; /* there is some default margin and we must remove them*/
+            font-family: Arial, sans-serif;
+        }
+
+     /* Navbar container */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Center menu */
+        .menu {
+            display: flex;   /* creates rows of items */
+            gap: 30px;
+            margin: auto;   /* THIS centers the whole menu part */
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login button */
+        .login-btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .login-btn:hover {
+            background-color: #2e9b34;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="navbar">
+
+    <!-- Left Logo -->
+    <div class="logo">Nalisha/23</div>
+
+    <!-- Center Menu -->
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Right Login -->
+    <button class="login-btn">Login</button>
+
+</div>
+
+</body>
+</html>
+
+<!-- PADDING SHORTHAND EXAMPLES
+1 value — applies to ALL sides
+padding: 10px;
+top: 10px
+right: 10px
+bottom: 10px
+left: 10px
+
+2 values — vertical | horizontal
+padding: 8px 16px;
+top: 8px
+bottom: 8px
+left: 16px
+right: 16px
+
+3 values — top | left-right | bottom
+padding: 8px 16px 4px;
+top: 8px
+left: 16px
+right: 16px
+bottom: 4px
+
+4 values — top | right | bottom | left (clockwise — TRBL)
+padding: 8px 16px 4px 2px;
+top: 8px
+right: 16px
+bottom: 4px
+left: 2px
+
+REMEMBER:
+TRBL = Top Right Bottom Left
+2 values = vertical horizontal -->
+

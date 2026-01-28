@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px; /* for the whole container not each card */
+}
+
+.card {
+    flex: 0 0 calc(25% - 10px);   /* 4 cards per row (desktop), flex-grow | flex-shrink | flex-basis
+*/
+    box-sizing: border-box;
+    background: #fabcbc;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .card {
+        flex: 0 0 calc(50% - 10px);   /* 2 cards per row */
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .card {
+        flex: 0 0 calc(100% - 10px);  /* 1 card per row */
+    }
+}

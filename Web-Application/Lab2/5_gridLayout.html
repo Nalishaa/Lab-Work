@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid Page Layout</title>
+
+<style>
+body {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Main grid container */
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    height: 100vh;
+}
+
+/* Layout sections */
+.header {
+    display: grid;
+    grid-area: header;
+    background: #78e27c;
+    place-items: center;
+}
+
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    background: #a46cff;
+    place-items: center;
+}
+
+.content {
+    display: grid;
+    grid-area: content;
+    background: #ff8080;
+    place-items: center;
+}
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    background: #8ad9db;
+    place-items: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">Header (Nalisha /23)</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content Area</div>
+    <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>
