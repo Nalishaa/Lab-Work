@@ -1,0 +1,50 @@
+<!-- Immediately Invoked Function Expression (IIFE)
+An Immediately Invoked Function Expression (IIFE) is a JavaScript function that runs immediately after it is defined.
+👉 Why it is used:
+To execute code only once without leaving variables behind
+To avoid polluting the global scope
+To create a private scope for variables 
+
+
+Syntax and Example
+Copy
+(function () {
+  // code inside IIFE
+})();
+
+// Or using arrow function:
+(() => {
+  // code inside IIFE
+})();
+
+// Example
+(function () {
+  let message = "Hello from IIFE!";
+  console.log(message);
+})();
+-->
+<html>
+    <head><title>IIFE</title></head>
+    <body>
+        <h2>Open console for output</h2>
+        <script>
+  var globalVar = "Outside";
+
+  (function () {
+    var globalVar = "Inside";
+    console.log("IIFE: " + globalVar);
+  })();
+
+  console.log("Global: " + globalVar);
+</script>
+
+    </body>
+</html>
+
+<!-- Function Expression
+const sayHi = function () {
+  console.log("Hi");
+};
+
+Here the function is assigned to varible like in x=5
+so its called function expression -->
