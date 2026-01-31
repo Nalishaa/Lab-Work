@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Background Color Selector</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Choose Background Color</h1>
+    Nalisha /23 <br> <br>
+    <form id="form">
+      <input type="radio" id="green" name="color" value="green" />
+      <label for="green">Green</label>
+      <!-- name="color"
+THIS IS IMPORTANT.
+All radios with same name become a group.
+Meaning:
+👉 Only ONE can be selected.
+
+<label for="green">
+Connects text to radio.
+So clicking Green also clicks radio. -->
+      <br /><br />
+      <input type="radio" id="red" name="color" value="red" />
+      <label for="red">Red</label>
+      <br /><br />
+      <input type="radio" id="blue" name="color" value="blue" />
+      <label for="blue">Blue</label>
+      <br /><br />
+      <input type="radio" id="black" name="color" value="black" />
+      <label for="black">Black</label>
+    </form>
+
+    <script>
+      const radioButtons = document.querySelectorAll('input[name="color"]');
+
+      // Add event listener to each radio button
+      radioButtons.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          if (this.checked) {
+            // Change the background color of the body
+            document.body.style.backgroundColor = this.value;
+          }
+        });
+      });
+    /*radioButtons.forEach[this is loop for each radio]((radio) [this is a function, doesnt have name] => {
+        radio.addEventListener("change", function [this is a function, doesnt have name]() {
+          if (this.checked) {
+            // Change the background color of the body
+            document.body.style.backgroundColor = this.value;
+          }
+        });
+      }); 
+      
+If you had numbers:
+[1,2,3].forEach((x) => {
+  console.log(x);
+});
+*/
+    </script>
+  </body>
+</html>
