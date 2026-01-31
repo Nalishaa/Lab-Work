@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Image Description Change</title>
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    Nalisha /23 <br>
+    <img
+      src="https://images.unsplash.com/photo-1707702503888-c86dc70b37c1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Sample Image"
+      onmouseover="changeDescription()"
+      onmouseout="resetDescription()"
+    />
+    <p id="description">This is a sample image description.</p>
+
+    <script>
+      function changeDescription() {
+        document.getElementById("description").textContent =
+          "You are hovering over the image!";
+      }
+
+      function resetDescription() {
+        document.getElementById("description").textContent =
+          "This is a sample image description.";
+      }
+    </script>
+  </body>
+</html>
