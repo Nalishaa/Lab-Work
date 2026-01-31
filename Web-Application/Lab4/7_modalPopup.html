@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <title>JS Dynamic Menu</title>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;  /* stays fixed even if you scroll */
+        inset: 0;
+/* inset: 0; it applies to the popup screen not button screen
+This is shorthand for:
+top: 0;
+right: 0;
+bottom: 0;
+left: 0; */
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        background: white;
+        padding: 20px;
+        width: 200px;
+        margin: 100px auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openModal()">Modal Popup</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>This is a modal popup</p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script>
+      function openModal() {
+        document.getElementById("modal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- display: none
+❌ hidden
+
+display: block
+✅ visible
+✅ full width
+✅ new line
+
+display: inline
+✅ visible
+❌ no full width
+❌ same line -->
