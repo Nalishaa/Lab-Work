@@ -41,31 +41,31 @@
       function calculate(operation) {
         const op1 = parseFloat(document.getElementById("operand1").value);
         const op2 = parseFloat(document.getElementById("operand2").value);
-        let res;
+        let result;
 
         if (isNaN(op1) || isNaN(op2)) {
-          res = "Invalid input";
+          result = "Invalid input";
         } else {
           switch (operation) {
             case "add":
-              res = op1 + op2;
+              result = op1 + op2;
               break;
             case "sub":
-              res = op1 - op2;
+              result = op1 - op2;
               break;
             case "mul":
-              res = op1 * op2;
+              result = op1 * op2;
               break;
             case "div":
-              res = op2 !== 0 ? op1 / op2 : "Divide by 0 error";
+              result = op2 !== 0 ? op1 / op2 : "Divide by 0 error";
               break;
             case "mod":
-              res = op2 !== 0 ? op1 % op2 : "Divide by 0 error";
+              result = op2 !== 0 ? op1 % op2 : "Divide by 0 error";
               break;
           }
         }
 
-        document.getElementById("result").value = res;
+        document.getElementById("result").value = result;
       }
     </script>
   </body>
