@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Dynamic Menu</title>
+
+    <style>
+      nav {
+        background: #0d85bd;
+      }
+      nav ul {
+        list-style: none; /* removes the bullets */
+        padding: 10px;
+        gap: 20px;
+      }
+      nav > ul {    /* targets only the main menu not the dropdown */
+        display: flex;  /* makes it horizontal */
+        gap: 20px;
+      }
+      nav li {
+        position: relative;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;  /* removes underline */
+        padding: 6px 8px;
+        font-size: 18px;
+        display: inline-block;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .dropdown {
+        position: absolute;  /* lets you place it anywhre */
+        top: 32px;
+        left: 0;
+        background: rgb(222, 241, 247);
+        min-width: 200px;
+        border: 1px solid #ccc;
+      }
+      .dropdown.hide {  /* if element has both- dropdown and hide then it becomes invisible, 
+        when we click JS removes hide and only .dropdown remains */
+        display: none;
+      }
+      .dropdown a {
+        color: black;
+        padding: 8px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/home">Home</a></li>
+
+        <!--   javascript uses id  -->
+          <li id="services">
+          <a href="#">Services</a>
+          <ul class="dropdown hide" id="servicesSubMenu">
+            <li><a href="/services/web">Web Development</a></li>
+            <li><a href="/services/mobile">Mobile Apps</a></li>
+            <li><a href="/services/seo">SEO</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+Nalisha /23
+    <script>
+      const servicesMenu = document.getElementById("services");
+      const servicesSubMenu = document.getElementById("servicesSubMenu");
+
+      servicesMenu.addEventListener("click", (event) => {
+        event.preventDefault();
+        servicesSubMenu.classList.toggle("hide");
+      });
+    </script>
+  </body>
+</html>
