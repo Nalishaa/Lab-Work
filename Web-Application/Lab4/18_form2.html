@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <script>
+    // Validate Username
+    function validateUsername() {
+      let username = document.getElementById("username").value.trim();
+
+      if (username === "") {
+        alert("Username cannot be empty");
+        return false;
+      }
+      return true;
+    }
+
+    // Validate Age
+    function validateAge() {
+      let age = document.getElementById("age").value;
+
+      if (age === "") {
+        alert("Age cannot be empty");
+        return false;
+      }
+
+      if (age < 8 || age > 60) {
+        alert("Age must be between 8 and 60");
+        return false;
+      }
+
+      return true;
+    }
+
+    // Validate Password
+    function validatePassword() {
+      let password = document.getElementById("password").value;
+
+      // Given Regex
+      let passwordRegex = /^[a-zA-Z][a-zA-Z\d]{4,}\d$/;
+
+      if (password === "") {
+        alert("Password cannot be empty");
+        return false;
+      }
+
+      if (!passwordRegex.test(password)) {
+        alert("Password must be at least 6 characters, start with alphabet and end with digit");
+        return false;
+      }
+
+      return true;
+    }
+
+    // Main Validation
+    function validateForm() {
+      if (!validateUsername()) return false;
+      if (!validateAge()) return false;
+      if (!validatePassword()) return false;
+
+      alert("Form Submitted Successfully!");
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+
+  <form onsubmit="return validateForm()">
+    
+    <label>Username:</label>
+    <input type="text" id="username">
+    <br><br>
+
+    <label>Age:</label>
+    <input type="number" id="age">
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
