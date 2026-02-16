@@ -1,0 +1,41 @@
+<!-- Arrow Function
+
+An arrow function is a shorter syntax for writing functions in JavaScript, introduced in ES6.
+It provides a cleaner, concise way to define functions and does not have its own this, arguments, or super. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial Using Arrow Function</title>
+</head>
+<body>
+
+  <h2>Factorial Calculator</h2>
+
+  <input type="number" id="number" placeholder="Enter a number">
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+
+  <p id="result"></p>
+
+  <script>
+    // Arrow function to calculate factorial
+    const factorial = (n) => {
+      if (n < 0) return "Invalid input";  // Negative numbers not allowed
+      let result = 1;
+      for (let i = 2; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    };
+
+    // Function to get input and display result
+    function calculateFactorial() {
+      const num = parseInt(document.getElementById("number").value);
+      const fact = factorial(num);
+      document.getElementById("result").textContent = 
+        `Factorial of ${num} is ${fact}`;
+    }
+  </script>
+
+</body>
+</html>
