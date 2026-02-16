@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Numbers</title>
+</head>
+<body>
+
+  <h2>Sum Calculator</h2>
+
+  <p>Enter numbers separated by commas (e.g., 1,2,3):</p>
+  <input type="text" id="numbers" placeholder="Enter numbers">
+  <button onclick="calculateSum()">Calculate Sum</button>
+
+  <p id="result"></p>
+
+  <script>
+    // Function that sums any number of arguments using rest operator
+    function sum(...numbers) {
+      let total = 0;
+      for (let num of numbers) {
+        total += num;
+      }
+      return total;
+    }
+
+    // Function to get input from user and display result
+    function calculateSum() {
+      const input = document.getElementById("numbers").value;
+      if (!input) {
+        document.getElementById("result").textContent = "Please enter numbers.";
+        return;
+      }
+
+      // Convert input string to array of numbers
+      const numArray = input.split(",").map(Number);
+
+      // Check for invalid input
+      if (numArray.some(isNaN)) {
+        document.getElementById("result").textContent = "Invalid input! Enter only numbers.";
+        return;
+      }
+
+      // Calculate sum
+      const total = sum(...numArray);
+
+      // Display result
+      document.getElementById("result").textContent = `Sum: ${total}`;
+    }
+  </script>
+
+</body>
+</html>
