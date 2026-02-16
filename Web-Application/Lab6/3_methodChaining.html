@@ -1,0 +1,41 @@
+<!-- Method Chaining in jQuery
+
+Definition:
+
+In jQuery, most methods return the jQuery object itself, allowing you to perform multiple operations on the same element in a single statement. This is called method chaining. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Method Chaining Example</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: lightblue;
+      display: none;
+      margin: 20px;
+      text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">Hello!</div>
+  <button id="showBtn">Show Box</button>
+
+  <script>
+    $("#showBtn").click(function () {
+      $(".box")
+        .addClass("active")          // Add a class
+        .css("color", "red")         // Change text color
+        .fadeIn(1000)                // Fade in
+        .delay(2000)                 // Wait for 2 seconds
+        .fadeOut(500);               // Fade out
+    });
+  </script>
+
+</body>
+</html>
